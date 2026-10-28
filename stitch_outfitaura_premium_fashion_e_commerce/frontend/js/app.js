@@ -2,7 +2,8 @@
  * OutfitAura Shared Luxury E-Commerce Engine
  */
 
-const API_BASE = '/api';
+// API Base URL (defaults to /api or window.VITE_API_URL)
+const API_BASE = (typeof window !== 'undefined' && window.VITE_API_URL) ? window.VITE_API_URL : '/api';
 
 // Generate or retrieve persistent guest session ID
 function getSessionId() {
