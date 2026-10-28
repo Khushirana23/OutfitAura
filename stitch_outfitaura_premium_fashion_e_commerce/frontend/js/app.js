@@ -2,8 +2,10 @@
  * OutfitAura Shared Luxury E-Commerce Engine
  */
 
-// API Base URL (defaults to /api or window.VITE_API_URL)
-const API_BASE = (typeof window !== 'undefined' && window.VITE_API_URL) ? window.VITE_API_URL : '/api';
+// API Base URL (defaults to live Render backend or window.VITE_API_URL)
+const API_BASE = (typeof window !== 'undefined' && window.VITE_API_URL) 
+    ? window.VITE_API_URL 
+    : 'https://outfitaura-qbd2.onrender.com/api';
 
 // Generate or retrieve persistent guest session ID
 function getSessionId() {
