@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Garment Details — OutfitAura</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#70585b",
+                        "primary-container": "#fadadd",
+                        "on-primary-container": "#765e61",
+                        "surface": "#fbf9f9",
+                        "on-surface": "#1b1c1c",
+                        "on-surface-variant": "#4f4445",
+                    },
+                    fontFamily: {
+                        "serif": ["Playfair Display", "serif"],
+                        "sans": ["DM Sans", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#fbf9f9] text-[#1b1c1c] font-sans antialiased min-h-screen flex flex-col selection:bg-[#fadadd] selection:text-[#765e61]">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-[#fbf9f9]/85 backdrop-blur-md sticky top-0 w-full z-40 border-b border-stone-200/60">
+        <div class="flex justify-between items-center w-full px-6 md:px-16 max-w-7xl mx-auto h-20">
+            <a href="/" class="font-serif text-2xl md:text-3xl tracking-tight text-[#1b1c1c] font-semibold hover:opacity-80 transition-opacity">
+                OutfitAura
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-sans text-sm tracking-wide text-[#4f4445]">
+                <a href="/" class="hover:text-[#70585b] transition-colors">Home</a>
+                <a href="/shop.html?category=Women" class="hover:text-[#70585b] transition-colors">Women</a>
+                <a href="/shop.html?category=Men" class="hover:text-[#70585b] transition-colors">Men</a>
+                <a href="/shop.html?is_new_arrival=true" class="hover:text-[#70585b] transition-colors">New Arrivals</a>
+            </nav>
+
+            <div class="flex items-center gap-4 text-[#1b1c1c]">
+                <button data-open-cart aria-label="Shopping Bag" class="p-2 hover:text-[#70585b] transition-colors relative">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span class="cart-badge absolute top-1 right-1 bg-[#1b1c1c] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold" style="display: none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Container -->
+    <main class="max-w-7xl mx-auto px-6 md:px-16 py-10 flex-grow w-full" id="product-container">
+        <!-- Loading State -->
+        <div class="py-24 text-center text-stone-400">
+            <span class="material-symbols-outlined text-4xl animate-spin">refresh</span>
+            <p class="mt-2 text-xs uppercase tracking-widest">Loading garment details...</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-100 border-t border-stone-200 w-full py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 md:px-16 text-center text-xs text-stone-500">
+            <span class="font-serif text-lg font-bold text-[#1b1c1c] block mb-1">OutfitAura</span>
+            <p>© 2024 OutfitAura Digital Atelier. Express Your Style.</p>
+        </div>
+    </footer>
+
+    <!-- App Engine -->
+    <script src="/js/app.js"></script>
+    <script>
+        let currentProduct = null;
+        let selectedSize = 'S';
+        let selectedColor = 'Blush Pink';
+
+        async function loadProduct() {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('slug') || params.get('id') || 'silk-slip-dress';
+
+            try {
+                const prod = await apiFetch(`/products/${slug}`);
+                currentProduct = prod;
+                selectedSize = prod.sizes[0] || 'S';
+                selectedColor = prod.colors[0]?.name || 'Standard';
+                renderProduct(prod);
+            } catch (err) {
+                document.getElementById('product-container').innerHTML = `
+                    <div class="text-center py-20">
+                        <h2 class="font-serif text-2xl font-bold text-stone-900">Garment Not Found</h2>
+                        <p class="text-xs text-stone-500 mt-2">The requested piece is no longer in the atelier archive.</p>
+                        <a href="/shop.html" class="inline-block mt-6 px-6 py-2.5 bg-stone-900 text-white rounded text-xs uppercase font-bold tracking-widest">Explore Collection</a>
+                    </div>
+                `;
+            }
+        }
+
+        function renderProduct(prod) {
+            document.title = `${prod.name} — OutfitAura`;
+            const container = document.getElementById('product-container');
+            
+            const images = prod.images && prod.images.length > 0 ? prod.images : [prod.thumbnail];
+            
+            container.innerHTML = `
+                <!-- Breadcrumbs -->
+                <div class="text-xs text-stone-400 mb-8 flex items-center gap-2">
+                    <a href="/" class="hover:text-stone-900">Home</a>
+                    <span>/</span>
+                    <a href="/shop.html?category=${prod.category}" class="hover:text-stone-900">${prod.category}</a>
+                    <span>/</span>
+                    <span class="text-stone-900">${prod.name}</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                    <!-- Left: Gallery -->
+                    <div class="md:col-span-7 flex flex-col-reverse md:flex-row gap-4">
+                        <!-- Thumbnails -->
+                        <div class="flex md:flex-col gap-3 overflow-x-auto shrink-0 md:w-20">
+                            ${images.map((img, i) => `
+                                <button onclick="switchImage('${img}')" class="w-16 h-20 md:w-full md:h-24 rounded border border-stone-200 overflow-hidden hover:border-stone-900 transition-colors">
+                                    <img src="${img}" alt="Thumbnail" class="w-full h-full object-cover">
+                                </button>
+                            `).join('')}
+                        </div>
+                        <!-- Main Preview -->
+                        <div class="flex-1 bg-stone-100 rounded-xl overflow-hidden aspect-[3/4]">
+                            <img id="main-product-image" src="${images[0]}" alt="${prod.name}" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Right: Product Information & Purchase -->
+                    <div class="md:col-span-5 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-xs uppercase font-bold tracking-widest text-[#70585b]">${prod.category} ${prod.subcategory ? '• ' + prod.subcategory : ''}</span>
+                                <span class="text-xs text-amber-500 font-bold flex items-center">★ ${prod.rating} (${prod.review_count})</span>
+                            </div>
+                            <h1 class="font-serif text-3xl font-bold text-stone-900 leading-tight">${prod.name}</h1>
+                            <div class="flex items-baseline gap-3 mt-3">
+                                <span class="text-2xl font-bold text-stone-900">$${prod.price.toFixed(2)}</span>
+                                ${prod.original_price ? `<span class="text-sm line-through text-stone-400">$${prod.original_price.toFixed(2)}</span>` : ''}
+                            </div>
+                            <p class="text-sm text-[#4f4445] mt-4 leading-relaxed">${prod.description}</p>
+
+                            <!-- Color Swatches -->
+                            ${prod.colors && prod.colors.length > 0 ? `
+                                <div class="mt-6">
+                                    <label class="block text-xs uppercase font-bold tracking-wider text-stone-700 mb-2">
+                                        Color: <span id="color-label" class="font-normal text-stone-900">${prod.colors[0].name}</span>
+                                    </label>
+                                    <div class="flex gap-2">
+                                        ${prod.colors.map(c => `
+                                            <button onclick="selectColor('${c.name}', this)" 
+                                                    class="color-btn w-8 h-8 rounded-full border-2 border-stone-300 p-0.5 hover:scale-110 transition-transform" 
+                                                    title="${c.name}">
+                                                <span class="block w-full h-full rounded-full" style="background-color: ${c.hex};"></span>
+                                            </button>
+                                        `).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+
+                            <!-- Size Selector -->
+                            <div class="mt-6">
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs uppercase font-bold tracking-wider text-stone-700">Select Size</label>
+                                    <button class="text-xs text-stone-500 hover:text-stone-900 underline">Size Guide</button>
+                                </div>
+                                <div class="flex gap-2">
+                                    ${prod.sizes.map(s => `
+                                        <button onclick="selectSize('${s}', this)" 
+                                                class="size-btn px-4 py-2 text-xs font-semibold rounded border border-stone-300 hover:border-stone-900 ${s === selectedSize ? 'bg-stone-900 text-white' : 'text-stone-800'}">
+                                            ${s}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA Actions -->
+                        <div class="mt-8 space-y-3 pt-6 border-t border-stone-200">
+                            <button onclick="cartDrawer.addItem('${prod.id}', selectedSize, selectedColor, 1)" 
+                                    class="w-full bg-[#1b1c1c] text-white py-4 rounded-lg uppercase tracking-widest text-xs font-bold hover:bg-[#303031] transition-all shadow-md">
+                                Add to Shopping Bag
+                            </button>
+                            <div class="flex items-center justify-center gap-6 text-xs text-stone-500 pt-2">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_shipping</span> Complimentary Delivery</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">sync</span> 30-Day Returns</span>
+                            </div>
+                        </div>
+
+                        <!-- Details Accordion -->
+                        ${prod.details && prod.details.length > 0 ? `
+                            <div class="mt-8 pt-6 border-t border-stone-200">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-stone-900 mb-3">Atelier Fabric & Craft</h4>
+                                <ul class="list-disc list-inside text-xs text-stone-600 space-y-1">
+                                    ${prod.details.map(d => `<li>${d}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        function switchImage(src) {
+            const mainImg = document.getElementById('main-product-image');
+            if (mainImg) mainImg.src = src;
+        }
+
+        function selectSize(size, el) {
+            selectedSize = size;
+            document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('bg-stone-900', 'text-white'));
+            el.classList.add('bg-stone-900', 'text-white');
+        }
+
+        function selectColor(colorName, el) {
+            selectedColor = colorName;
+            const lbl = document.getElementById('color-label');
+            if (lbl) lbl.textContent = colorName;
+            document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('border-stone-900', 'ring-2', 'ring-stone-900'));
+            el.classList.add('border-stone-900', 'ring-2', 'ring-stone-900');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProduct);
+    </script>
+</body>
+</html>

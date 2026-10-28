@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OutfitAura - Express Your Style</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#e2e2e2",
+                        "background": "#fbf9f9",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface": "#fbf9f9",
+                        "surface-container": "#efeded",
+                        "primary-fixed-dim": "#debfc2",
+                        "on-surface-variant": "#4f4445",
+                        "on-primary-fixed-variant": "#574144",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-surface": "#303031",
+                        "inverse-primary": "#debfc2",
+                        "surface-tint": "#70585b",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "secondary-container": "#e2e2e2",
+                        "on-secondary-container": "#646464",
+                        "primary-container": "#fadadd",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-container": "#765e61",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e7",
+                        "outline": "#807475",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary": "#5e5e5e",
+                        "on-tertiary-container": "#636465",
+                        "on-primary-fixed": "#281719",
+                        "primary": "#70585b",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d2c3c4",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "on-background": "#1b1c1c",
+                        "surface-variant": "#e3e2e2",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-fixed": "#fbdbde",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5d5f5f",
+                        "inverse-on-surface": "#f2f0f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-md": "24px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "label-sm": ["DM Sans"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 w-full z-50 shadow-sm dark:shadow-none transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface dark:text-inverse-on-surface flex items-center gap-2" href="#">
+                OutfitAura
+                {{DATA:INPUT:INPUT_1}}
+            </a>
+<!-- Navigation Links (Hidden on mobile, handled differently if there was a BottomNav, but for now we'll just show them flexed on md+) -->
+<nav class="hidden md:flex items-center gap-8 font-body-md text-body-md text-on-surface dark:text-inverse-on-surface">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 Active: opacity-70 transition-opacity" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-on-surface" href="#">Women</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-on-surface" href="#">Men</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-on-surface" href="#">New Arrivals</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-on-surface" href="#">Trending</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300 hover:text-on-surface" href="#">Sale</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-4 text-on-surface dark:text-inverse-on-surface">
+<button aria-label="Search" class="hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<button aria-label="Favorites" class="hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<button aria-label="Shopping Bag" class="hover:text-primary transition-colors duration-300 relative group">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+<button aria-label="Profile" class="hover:text-primary transition-colors duration-300 hidden md:block">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu" class="md:hidden hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto overflow-hidden">
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] md:h-[90vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop mb-stack-lg">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover opacity-90" data-alt="A stunning high-fashion editorial photograph of a diverse group of Gen-Z models wearing minimalist, avant-garde clothing in soft blush pinks, whites, and blacks. They are posing in a bright, modern, airy studio space with lots of natural light and soft shadows, creating a premium lookbook aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnk_7dnbQdE4IqYumlV-vWXTGOmhWDZnLf4s3st6VPUPTN-Hac4VNoMuuHP87ls0USTJcpMEo9mTwHZjue8O1PHWBHrLuYQOdjuWR33a2i5n5IiSswkU1DyXUCiWj5rUwd-hj6oqlA1NmFL41RZbUGqp3eUQO9vHHnIbk01F9Wcv894g1JnaXo3sAm1qqmpfpRS0O4ItoiRHj9PxHBUSDMh1cUys4_tB1ZxUlmYs_KT5sCgr8LgCgC"/>
+<div class="absolute inset-0 bg-surface/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center max-w-3xl mx-auto flex flex-col items-center gap-stack-md bg-surface/40 backdrop-blur-md p-8 md:p-12 rounded-xl border border-surface-variant/50">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-surface">Express Your Style</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Discover fashion that feels uniquely you.</p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4 w-full sm:w-auto">
+<button class="bg-on-surface text-on-primary rounded px-8 py-4 font-label-sm text-label-sm hover:bg-on-surface-variant transition-colors duration-300 uppercase tracking-widest w-full sm:w-auto">Shop Women</button>
+<button class="bg-transparent border border-on-surface text-on-surface rounded px-8 py-4 font-label-sm text-label-sm hover:bg-surface-variant transition-colors duration-300 uppercase tracking-widest w-full sm:w-auto">Shop Men</button>
+</div>
+</div>
+</section>
+<!-- Promotional Banner -->
+<section class="w-full bg-primary-container py-stack-md px-margin-mobile md:px-margin-desktop mb-stack-lg flex flex-col md:flex-row items-center justify-between gap-stack-md rounded-xl mx-auto max-w-[calc(100%-40px)] md:max-w-[calc(100%-128px)]">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary-container mb-2">Your Style. Your Aura.</h2>
+<p class="font-body-md text-body-md text-on-primary-container/80">Elevate your everyday wardrobe with our curated essentials.</p>
+</div>
+<a class="bg-primary text-on-primary rounded px-6 py-3 font-label-sm text-label-sm hover:bg-primary/90 transition-colors uppercase tracking-widest shrink-0" href="#">Discover the Collection</a>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-low dark:bg-surface-dim w-full py-stack-lg flat no shadows mt-auto transition-all duration-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface dark:text-inverse-on-surface">OutfitAura</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">© 2024 OutfitAura. EXPRESS YOUR STYLE.</p>
+</div>
+<div class="flex flex-col gap-3 font-body-md text-body-md">
+<h4 class="text-on-surface font-bold mb-2">Shop</h4>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">Women</a>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">Men</a>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">New Arrivals</a>
+</div>
+<div class="flex flex-col gap-3 font-body-md text-body-md">
+<h4 class="text-on-surface font-bold mb-2">Customer Care</h4>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">About Us</a>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">Shipping</a>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">Returns</a>
+<a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-on-surface font-bold font-body-md text-body-md">Stay in the Aura</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign up for early access to drops and exclusive offers.</p>
+<form class="flex w-full border-b border-outline focus-within:border-on-surface transition-colors">
+<input class="bg-transparent border-none focus:ring-0 w-full px-0 py-2 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/50" placeholder="Your email address" type="email"/>
+<button class="p-2 hover:text-primary transition-colors" type="submit">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</footer>
+</body></html>

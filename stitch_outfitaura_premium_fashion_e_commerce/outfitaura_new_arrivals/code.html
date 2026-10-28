@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OutfitAura - Women's Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#e2e2e2",
+                        "background": "#fbf9f9",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface": "#fbf9f9",
+                        "surface-container": "#efeded",
+                        "primary-fixed-dim": "#debfc2",
+                        "on-surface-variant": "#4f4445",
+                        "on-primary-fixed-variant": "#574144",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-surface": "#303031",
+                        "inverse-primary": "#debfc2",
+                        "surface-tint": "#70585b",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "secondary-container": "#e2e2e2",
+                        "on-secondary-container": "#646464",
+                        "primary-container": "#fadadd",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-container": "#765e61",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e7",
+                        "outline": "#807475",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary": "#5e5e5e",
+                        "on-tertiary-container": "#636465",
+                        "on-primary-fixed": "#281719",
+                        "primary": "#70585b",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d2c3c4",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "on-background": "#1b1c1c",
+                        "surface-variant": "#e3e2e2",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-fixed": "#fbdbde",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5d5f5f",
+                        "inverse-on-surface": "#f2f0f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-md": "24px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "label-sm": ["DM Sans"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 w-full z-50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<div class="flex-shrink-0">
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface dark:text-inverse-on-surface block" href="#">
+                    {{DATA:INPUT:INPUT_1}}
+                </a>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex space-x-gutter">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300" href="#">Women</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Men</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">New Arrivals</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Trending</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Sale</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center space-x-unit md:space-x-4">
+<button aria-label="Search" class="p-2 text-on-surface hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+<button aria-label="Favorite" class="p-2 text-on-surface hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+<button aria-label="Shopping Bag" class="p-2 text-on-surface hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</button>
+<button aria-label="Profile" class="p-2 text-on-surface hover:text-primary transition-colors duration-300 hidden md:block">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</button>
+<!-- Mobile Menu Button -->
+<button aria-label="Menu" class="md:hidden p-2 text-on-surface">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Banner -->
+<section class="w-full bg-primary-container/30 py-stack-lg md:py-margin-desktop mb-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-on-primary-container mb-unit">New Arrivals</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Discover the latest feminine silhouettes and editorial textures, designed for effortless elegance.</p>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter mb-margin-desktop">
+<!-- Sidebar Filters -->
+<aside class="hidden md:block md:col-span-3 pr-gutter border-r border-surface-variant">
+<div class="sticky top-[100px] space-y-stack-md">
+<!-- Categories -->
+<div>
+<h3 class="font-headline-md text-body-lg font-bold mb-unit text-on-surface border-b border-surface-variant pb-2">Category</h3>
+<ul class="space-y-2 mt-4 font-body-md text-on-surface-variant">
+<li><label class="flex items-center space-x-2 cursor-pointer hover:text-primary transition-colors"><input checked="" class="form-checkbox rounded-sm text-primary focus:ring-primary border-outline-variant bg-surface" type="checkbox"/> <span>All Dresses</span></label></li>
+<li><label class="flex items-center space-x-2 cursor-pointer hover:text-primary transition-colors"><input class="form-checkbox rounded-sm text-primary focus:ring-primary border-outline-variant bg-surface" type="checkbox"/> <span>Tops &amp; Blouses</span></label></li>
+<li><label class="flex items-center space-x-2 cursor-pointer hover:text-primary transition-colors"><input class="form-checkbox rounded-sm text-primary focus:ring-primary border-outline-variant bg-surface" type="checkbox"/> <span>Knitwear</span></label></li>
+<li><label class="flex items-center space-x-2 cursor-pointer hover:text-primary transition-colors"><input class="form-checkbox rounded-sm text-primary focus:ring-primary border-outline-variant bg-surface" type="checkbox"/> <span>Outerwear</span></label></li>
+<li><label class="flex items-center space-x-2 cursor-pointer hover:text-primary transition-colors"><input class="form-checkbox rounded-sm text-primary focus:ring-primary border-outline-variant bg-surface" type="checkbox"/> <span>Trousers</span></label></li>
+</ul>
+</div>
+<!-- Size (Chips) -->
+<div>
+<h3 class="font-headline-md text-body-lg font-bold mb-unit text-on-surface border-b border-surface-variant pb-2">Size</h3>
+<div class="flex flex-wrap gap-2 mt-4">
+<button class="px-3 py-1 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface-variant hover:border-primary hover:text-primary transition-colors">XS</button>
+<button class="px-3 py-1 bg-on-surface border border-on-surface rounded-full font-label-sm text-label-sm text-surface hover:opacity-90 transition-opacity">S</button>
+<button class="px-3 py-1 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface-variant hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="px-3 py-1 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface-variant hover:border-primary hover:text-primary transition-colors">L</button>
+<button class="px-3 py-1 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface-variant hover:border-primary hover:text-primary transition-colors">XL</button>
+</div>
+</div>
+<!-- Price -->
+<div>
+<h3 class="font-headline-md text-body-lg font-bold mb-unit text-on-surface border-b border-surface-variant pb-2">Price</h3>
+<div class="mt-4 flex items-center space-x-2">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-on-surface focus:ring-0 font-body-md text-on-surface px-0 py-1 placeholder:text-on-surface-variant/50" placeholder="Min" type="text"/>
+<span class="text-on-surface-variant">-</span>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-on-surface focus:ring-0 font-body-md text-on-surface px-0 py-1 placeholder:text-on-surface-variant/50" placeholder="Max" type="text"/>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<section class="col-span-1 md:col-span-9">
+<!-- Toolbar -->
+<div class="flex justify-between items-center mb-stack-md pb-unit border-b border-surface-variant">
+<span class="font-body-md text-on-surface-variant">124 Results</span>
+<div class="flex items-center space-x-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sort by:</span>
+<select class="bg-transparent border-0 border-b border-outline-variant focus:border-on-surface focus:ring-0 font-body-md text-on-surface py-1 pl-0 pr-8 cursor-pointer">
+<option>Newest</option>
+<option>Price Low-High</option>
+<option>Price High-Low</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-gutter gap-y-stack-lg">
+<!-- Product Card 1 -->
+<div class="group relative flex flex-col">
+<div class="relative w-full aspect-[3/4] bg-primary-container/10 mb-unit overflow-hidden">
+<img alt="Product Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimal editorial fashion photograph of a woman wearing a draped blush pink silk slip dress. The setting is a clean, sunlit studio with stark white walls and a soft shadow cast on the floor. The lighting is high-key, natural, and flattering, emphasizing the texture of the silk. The mood is effortless, luxurious, and modern, fitting a high-end minimalist fashion brand. The color palette is dominated by soft pinks, pure whites, and subtle grey shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4FMkhFHbzSr9F3ssuHLBMWVG9hGjQvU37v6y626B5-97zseoWYv9C18O4cNG5qxNQBt2NMhiOCQvMw9_ooUesWWZDIOpV5vYvWStjCuWtsy_xM6g_L8Dun909IuWdOVBzcN7eivWvbCPNviKs-TOTEltj0pgjDfuVgZjsPc1QfYXRQcT3f9abTqMXOrBQqbMFGMZkKWJ0HYNYn8vGxGtPM-fdji5s7WeGcJvnTADlB1SFfID0jIdf"/>
+<!-- Quick Add overlay -->
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-t from-black/20 to-transparent">
+<button class="w-full bg-on-surface text-surface font-label-sm text-label-sm py-3 rounded hover:bg-surface-tint transition-colors">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h4 class="font-body-md text-body-md text-on-surface truncate">Silk Slip Midi Dress</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">$185</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative flex flex-col">
+<div class="relative w-full aspect-[3/4] bg-primary-container/10 mb-unit overflow-hidden">
+<img alt="Product Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An elegant editorial shot of a woman wearing a structured, oversized linen blazer in a soft oat color over a simple white top. She stands against a textured concrete wall bathed in warm, diffused morning light. The aesthetic is clean, minimalist-luxe, and professional yet relaxed. The image features a neutral color palette with focus on fabric texture and structural tailoring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIdo_gdA_XcuXGifqn-GEPtTRv3a3muQYXNA6zJvJ3KDO0VJmeeeUvhv0sFjED0fA1Kki4fqxKI-y1ZyzLwd8ENfRafIkF7wPE2PI4iHVnIzA88Ug8pzUERzXEwymjKbtfmDXT7g882voSWBzmNWdOEgz52Ke3b-lWO7uDHuX_JgWM008eN1rqw07T-B2M0_aH1AA1fTl-l3_lKAjbpBZgLQ3i1kY33PAQcxtVZSbjJkXhpCy2aMHS"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-t from-black/20 to-transparent">
+<button class="w-full bg-on-surface text-surface font-label-sm text-label-sm py-3 rounded hover:bg-surface-tint transition-colors">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h4 class="font-body-md text-body-md text-on-surface truncate">Oversized Linen Blazer</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">$240</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative flex flex-col">
+<div class="relative w-full aspect-[3/4] bg-primary-container/10 mb-unit overflow-hidden">
+<img alt="Product Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A fashion close-up of a ribbed cashmere mock-neck sweater in a soft charcoal grey. The model is positioned against a pristine white background, allowing the rich texture of the knitwear to take center stage. The lighting is soft and even, creating a cozy yet elevated and minimal mood. The overall style is modern luxury with a focus on premium materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjgzexLOym_A5F5Hp6l0L9QeSC9g81in5MHAJiBUNItlUHcd1pMS_V-_XWYxspzAQ9DoTWhwvS91Abu5oylRd35czSpjG51XM7nBWURK0P3Z4ByLAgRHY-ToKKn6wg5JMgIBuztgZ4NDHTUVnuKsVj1FSLZXFmhMFztbBhUZ3bsf2OzTtpemXO8qn9zkUyDlzk8huQF-z2S_ShLTjwQDeItidWxL_SduhyuZu3TCFhxv4VpViuMSBC"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-t from-black/20 to-transparent">
+<button class="w-full bg-on-surface text-surface font-label-sm text-label-sm py-3 rounded hover:bg-surface-tint transition-colors">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h4 class="font-body-md text-body-md text-on-surface truncate">Ribbed Cashmere Knit</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">$320</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative flex flex-col">
+<div class="relative w-full aspect-[3/4] bg-primary-container/10 mb-unit overflow-hidden">
+<img alt="Product Image" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Full body shot of a model walking towards the camera wearing wide-leg tailored trousers in deep navy, paired with a minimal white tank. The background is a blurred, airy urban street scene with modern architecture, capturing a sense of movement. The lighting is bright daylight. The mood is confident, effortless chic, fitting a high-end contemporary brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkTj_V3xPeNNJHLFdoNjiEia0Q1e804GL9fgKQj674pIcpzGrC26uqzbcj7AEe0rM36yS0CRAGsKVYk5am2XTUvkMen9w7Ku6Wmwa4eHLDo8hw6GsRaEO8PY4IhwefkxnPl23drAUzzY_0Et3ylkqxzW7VTB4Okh6gvJrM7NA0fCNVjwOm0fSsDd62tXIWYYchcYe738f4_DstTqjWl-UPgfhJcOhZuljkS65QUoOkQ8nU3f-hrPCw"/>
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-t from-black/20 to-transparent">
+<button class="w-full bg-on-surface text-surface font-label-sm text-label-sm py-3 rounded hover:bg-surface-tint transition-colors">Quick Add</button>
+</div>
+</div>
+<div class="flex flex-col">
+<h4 class="font-body-md text-body-md text-on-surface truncate">Wide-Leg Tailored Trouser</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">$195</span>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-stack-lg flex justify-center">
+<button class="px-8 py-3 border border-on-surface rounded font-label-sm text-label-sm text-on-surface hover:bg-on-surface hover:text-surface transition-colors duration-300">Load More</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-dim w-full py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface dark:text-inverse-on-surface mb-unit">{{DATA:INPUT:INPUT_1}}</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 OutfitAura. EXPRESS YOUR STYLE.</p>
+</div>
+<div class="md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 md:justify-end font-body-md text-body-md text-on-surface-variant">
+<a class="hover:underline decoration-primary underline-offset-4 hover:text-on-surface transition-all duration-200" href="#">Shop</a>
+<a class="hover:underline decoration-primary underline-offset-4 hover:text-on-surface transition-all duration-200" href="#">Customer Care</a>
+<a class="hover:underline decoration-primary underline-offset-4 hover:text-on-surface transition-all duration-200" href="#">About Us</a>
+<a class="hover:underline decoration-primary underline-offset-4 hover:text-on-surface transition-all duration-200" href="#">Shipping</a>
+<a class="hover:underline decoration-primary underline-offset-4 hover:text-on-surface transition-all duration-200" href="#">Returns</a>
+<a class="hover:underline decoration-primary underline-offset-4 hover:text-on-surface transition-all duration-200" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

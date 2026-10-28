@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OutfitAura - Silk Slip Dress</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#e2e2e2",
+                        "background": "#fbf9f9",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface": "#fbf9f9",
+                        "surface-container": "#efeded",
+                        "primary-fixed-dim": "#debfc2",
+                        "on-surface-variant": "#4f4445",
+                        "on-primary-fixed-variant": "#574144",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474747",
+                        "inverse-surface": "#303031",
+                        "inverse-primary": "#debfc2",
+                        "surface-tint": "#70585b",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "secondary-container": "#e2e2e2",
+                        "on-secondary-container": "#646464",
+                        "primary-container": "#fadadd",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-container": "#765e61",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e7",
+                        "outline": "#807475",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary": "#5e5e5e",
+                        "on-tertiary-container": "#636465",
+                        "on-primary-fixed": "#281719",
+                        "primary": "#70585b",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d2c3c4",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fbf9f9",
+                        "on-background": "#1b1c1c",
+                        "surface-variant": "#e3e2e2",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-fixed": "#fbdbde",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5d5f5f",
+                        "inverse-on-surface": "#f2f0f0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "stack-md": "24px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "stack-sm": "12px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "label-sm": ["DM Sans"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Shared Component -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors duration-300" href="#">
+                OutfitAura
+            </a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 Active: opacity-70 transition-opacity" href="#">Women</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors duration-300" href="#">Men</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors duration-300" href="#">New Arrivals</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors duration-300" href="#">Trending</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface hover:text-primary transition-colors duration-300" href="#">Sale</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-stack-sm md:gap-gutter">
+<button class="text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors duration-300 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant dark:hover:bg-inverse-surface">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</button>
+<button class="text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors duration-300 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant dark:hover:bg-inverse-surface relative">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-on-surface text-on-primary font-label-sm text-label-sm w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<button class="hidden md:flex text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors duration-300 items-center justify-center p-2 rounded-full hover:bg-surface-variant dark:hover:bg-inverse-surface">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</button>
+<button class="md:hidden text-on-surface dark:text-inverse-on-surface hover:text-primary transition-colors duration-300 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant dark:hover:bg-inverse-surface">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-md md:py-stack-lg">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm mb-stack-md">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Women</a>
+</div>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Dresses</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-surface">The bias-cut silk slip</span>
+</div>
+</li>
+</ol>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter lg:gap-margin-desktop mb-stack-lg md:mb-[96px]">
+<!-- Left: Image Gallery (8 cols) -->
+<div class="md:col-span-7 lg:col-span-8 flex flex-col-reverse md:flex-row gap-stack-sm h-[60vh] md:h-[80vh]">
+<!-- Thumbnails (Vertical on desktop, horizontal on mobile) -->
+<div class="flex md:flex-col gap-stack-sm overflow-x-auto md:overflow-y-auto no-scrollbar shrink-0 md:w-24 pb-2 md:pb-0">
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border border-on-surface transition-opacity overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up shot of a luxurious blush pink silk slip dress draped elegantly over a minimal white pedestal. The lighting is soft and high-key, highlighting the smooth texture and subtle sheen of the fabric against a clean, modern studio background. The aesthetic is high-end fashion boutique, serene, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjBK9ZlWTL9OclwEi7Q8F_0_oqUgKhBirVlo1b11UMkWq6fF1c3xcLYxryvCHqSI6jWC0TDWgiBYEGFgsT3Ev0i34lNXkkhYeqrkxcchQVlyzQk0UFPULaYL-aHX4PwJk5LJKJRAQeOiK--qTAuLbQKRNWcgHJkEhUsbkoVS2eKycZy11MrPUkTJq3zKHh1YoYHGfVvGVvlCe9sc7jFliY0k0jq9B3TYcYqV4r0rJJLIb3Kpiwb4kX"/>
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border border-transparent hover:border-outline-variant opacity-70 hover:opacity-100 transition-all overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A fashion editorial shot of the back of a blush pink silk slip dress, showing delicate criss-cross straps and a subtle cowl back. The background is a soft, diffused light grey studio setting. The lighting emphasizes the flawless drape of the silk. The mood is minimalist, luxe, and effortlessly chic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu8PSN_vVKgtprR9-N8VK026AfUYx1Sc1-nl15gBKSMEcw39mPAQiOCZh2byTDjns6r7rRoHAh5CQ3jY81Q0stTexV7EmSM6xRHl7nKP9eKTJuhQx43mSxTCANc1rmOZTi8i8BB2fsPnbIZdi5912-GDz3_TzvmIYXQ1tkkzJCN9UBe1SCv8E8HeO5JO75feG8oc4sT8c9L2DQQp1jFkRl7nGa0L9vyzJXX4truksWTYu10TeBf5Y3"/>
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border border-transparent hover:border-outline-variant opacity-70 hover:opacity-100 transition-all overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro detail shot of the side seam and hem of a blush pink silk slip dress, showcasing the high-quality stitching and the fluid, liquid-like drape of the pure silk material. Warm, natural side-lighting creates gentle shadows, emphasizing the premium quality. The style is detailed, minimalist, and textural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY5iN6d4oHbcemP_agOceqGYQdkzxe9ZXMGPTLoB4MJ-zXCvDSre-SeC2uZBqh0Tm5h5X3FVXkJEmdU4uYqJ-D0j_wqP4FL9ODcxNAKIuA5RqUGnWYq0hUssLgo_hS4VYvRU_jjJa62Ug6fDaL86lfaDZfG0skj5yYJ87Z-T6jdOQFPB9GOdtMhmxUqJRioY40U2bFQaZMB5U7FfGJjiXYlZqU7P7K8Nx78P2Ew0VMR9zdxAAMlF4E"/>
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border border-transparent hover:border-outline-variant opacity-70 hover:opacity-100 transition-all overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Full body shot of a model wearing a blush pink silk slip dress, standing in a bright, minimalist architectural space with large windows casting soft, diffused sunlight. The dress flows elegantly, capturing a sense of movement. The overall tone is aspirational, modern, and high-fashion editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxb9N5Ystq2XEhRPZrhSdRy3_6TDLR5itDqOYQQPkLu-dEA8-uHloVGxKdiAkxTJMLgAB7JzX9wHSqNrj3OczWALT-ZGHhFbA2y1msebJDi6_UtUyI1E4XOo5R7rSzghV_SaYzspnQ4MY3lhZ75vxFGK9_84D33gx1EDgo1jZfa7-uPTWVl9XZIBDooEa8oVR4NiO5lqv6fnWQ2GCDmo-UzD7ze_Xl0Q22IH0CWjfzN1D8EtvTNp5D"/>
+</button>
+</div>
+<!-- Main Image -->
+<div class="flex-grow bg-surface-container-low relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A striking, full-length fashion editorial image of a luxurious blush pink silk slip dress on a headless mannequin in a pristine, minimalist studio. The lighting is bright and soft, creating a glowing 'Digital Atelier' aesthetic. The dress hangs beautifully, showcasing its effortless, aspirational design. The background is a crisp, clean off-white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN8cQOqfgpL_7EwvwS7DKPnKLe3fcZdc0DkZHhzm_9QY2qf0X4JvwfVW06xpLPeywbT7hJCoOnFSIpL0uYh3tVLpQazVGo149vyxT6GgWQMaxJyW23jzq1bVB5oVhYqG0sV6wDRt-O30XKYuOvbKuT3roMZKfSZ911UA_P_taaU51FrKWnZoaqzLX1zq_tptFTEdsgftCY4jSXcVGhd_dHoh6WOtG52iYFWIaqHeBSyCJFb5BV5nqX"/>
+<button class="absolute top-4 right-4 p-2 bg-surface/50 backdrop-blur-sm rounded-full text-on-surface hover:text-primary hover:bg-surface transition-colors">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+</div>
+</div>
+<!-- Right: Product Details (4 cols) -->
+<div class="md:col-span-5 lg:col-span-4 flex flex-col">
+<!-- Title & Price -->
+<div class="mb-stack-md">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">The Bias-Cut Silk Slip</h1>
+<div class="flex items-center gap-4 mb-4">
+<span class="font-body-lg text-body-lg text-on-surface-variant">$245.00</span>
+<div class="flex items-center text-primary-container">
+<span class="material-symbols-outlined filled text-[16px]">star</span>
+<span class="material-symbols-outlined filled text-[16px]">star</span>
+<span class="material-symbols-outlined filled text-[16px]">star</span>
+<span class="material-symbols-outlined filled text-[16px]">star</span>
+<span class="material-symbols-outlined text-[16px]">star_half</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm ml-2 underline underline-offset-2">(128 Reviews)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Effortlessly elegant. Crafted from 100% pure mulberry silk, this bias-cut slip dress drapes beautifully across the body, offering a liquid-like silhouette perfect for evening wear or layered daytime styling.
+                    </p>
+</div>
+<!-- Color Selection -->
+<div class="mb-stack-md">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-sm text-label-sm text-on-surface">Color: <span class="text-on-surface-variant ml-1 font-body-md">Blush Pink</span></span>
+</div>
+<div class="flex gap-3">
+<button aria-label="Blush Pink" class="w-8 h-8 rounded-full bg-primary-container border-2 border-on-surface ring-2 ring-transparent ring-offset-2 focus:outline-none"></button>
+<button aria-label="Midnight Black" class="w-8 h-8 rounded-full bg-[#1b1c1c] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+<button aria-label="Ivory White" class="w-8 h-8 rounded-full bg-[#f2f0f0] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+<button aria-label="Slate Grey" class="w-8 h-8 rounded-full bg-[#5e5e5e] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="mb-stack-md">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label-sm text-label-sm text-on-surface">Size: <span class="text-on-surface-variant ml-1 font-body-md" id="selected-size">Select</span></span>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface underline underline-offset-4 decoration-outline-variant transition-colors">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<button class="py-2 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface hover:border-on-surface transition-colors focus:outline-none focus:bg-on-surface focus:text-on-primary">XS</button>
+<button class="py-2 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface hover:border-on-surface transition-colors focus:outline-none focus:bg-on-surface focus:text-on-primary">S</button>
+<button class="py-2 border border-on-surface bg-on-surface rounded-full font-label-sm text-label-sm text-on-primary transition-colors focus:outline-none">M</button>
+<button class="py-2 border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface hover:border-on-surface transition-colors focus:outline-none focus:bg-on-surface focus:text-on-primary relative overflow-hidden group">
+                            L
+                            <div class="absolute inset-0 bg-outline/10 group-hover:bg-transparent transition-colors"></div>
+<svg class="absolute inset-0 w-full h-full text-outline/30" preserveaspectratio="none" viewbox="0 0 100 100"><line stroke="currentColor" stroke-width="1" x1="0" x2="100" y1="100" y2="0"></line></svg>
+</button>
+</div>
+</div>
+<!-- Quantity -->
+<div class="mb-stack-lg">
+<span class="font-label-sm text-label-sm text-on-surface block mb-2">Quantity</span>
+<div class="inline-flex items-center border border-outline-variant rounded-full overflow-hidden h-12">
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors focus:outline-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-12 text-center font-body-md text-on-surface border-none bg-transparent focus:ring-0 p-0" min="1" readonly="" type="number" value="1"/>
+<button class="px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-variant transition-colors focus:outline-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col gap-3 mb-stack-lg">
+<button class="w-full bg-on-surface text-on-primary font-body-md text-body-md py-4 rounded hover:bg-on-surface/90 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+                        Add to Bag
+                    </button>
+<button class="w-full bg-primary-container text-on-primary-container font-body-md text-body-md py-4 rounded hover:bg-primary-container/80 transition-colors flex items-center justify-center gap-2">
+                        Buy Now
+                    </button>
+<button class="w-full bg-transparent border border-on-surface text-on-surface font-body-md text-body-md py-4 rounded hover:bg-surface-variant transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+                        Add to Wishlist
+                    </button>
+</div>
+<!-- Accordions (Details) -->
+<div class="border-t border-outline-variant divide-y divide-outline-variant">
+<details class="group py-4" open="">
+<summary class="flex justify-between items-center cursor-pointer list-none font-body-lg text-body-lg text-on-surface focus:outline-none">
+                            Description
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed pb-2">
+<p>Designed to skim the body without clinging, this slip is cut on the bias to allow for natural stretch and a universally flattering fit. Features a delicate v-neckline, adjustable spaghetti straps, and a subtle midi length. The French seaming ensures a clean finish inside and out.</p>
+<ul class="list-disc pl-5 mt-2 space-y-1 text-sm">
+<li>Midi length (approx 45" from shoulder)</li>
+<li>Adjustable thin straps</li>
+<li>Unlined for maximum drape</li>
+</ul>
+</div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-body-lg text-body-lg text-on-surface focus:outline-none">
+                            Fabric &amp; Care
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed pb-2 hidden group-open:block">
+<p>100% Mulberry Silk (19 Momme).</p>
+<p class="mt-2">Dry clean only recommended to preserve the fabric's sheen and delicate nature. If hand washing, use cold water and a specialized silk detergent. Do not wring. Dry flat in shade.</p>
+</div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center cursor-pointer list-none font-body-lg text-body-lg text-on-surface focus:outline-none">
+                            Shipping &amp; Returns
+                            <span class="material-symbols-outlined transition-transform duration-300 group-open:-rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 font-body-md text-body-md text-on-surface-variant leading-relaxed pb-2 hidden group-open:block">
+<p>Complimentary standard shipping on all orders over $200. Express shipping available at checkout.</p>
+<p class="mt-2">Returns accepted within 14 days of delivery for unworn items with tags attached. A $10 restocking fee applies.</p>
+</div>
+</details>
+</div>
+</div>
+</div>
+<!-- Recommendations Grid -->
+<section class="mt-stack-lg md:mt-[96px] border-t border-outline-variant pt-stack-lg">
+<div class="flex justify-between items-end mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">You May Also Like</h2>
+<a class="font-label-sm text-label-sm text-on-surface hover:text-primary transition-colors flex items-center gap-1" href="#">
+                    View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Rec Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A fashion-forward image of a lightweight cashmere cardigan in a soft oat color, neatly folded on a minimalist marble block. The lighting is pristine and airy, fitting a high-end digital atelier aesthetic. The texture of the fine knit is visible, emphasizing luxury and comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoS3z4fwCozcq41WE7XpjHechWEqZOPYwnXtjZM5W-nYLDPDPIvHB0UfknKgtCeRhk6EsQDUK-tRbISMYkYI9C3GcvMowOzTttjUDFzbZhnbkTWG0XNDoXAAMvD6N0VsbbnHjOPivrr0nfV95XDZ-L5AS4yqFZfJAemukUJ37MLVN3WZVRPhswVrEf03hl3g82vsNolb0l0BnbwO_J162By4Kn6ZFA77WmAT9nb1mGYQej-CHIR1g6"/>
+<button class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-md w-8 h-8 rounded-full flex items-center justify-center text-on-surface opacity-0 group-hover:opacity-100 transition-opacity hover:bg-surface hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface truncate">The Cashmere Wrap Cardigan</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">$195.00</p>
+</div>
+<!-- Rec Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek, minimalist leather structured tote bag in deep burgundy, resting on a stark white surface against a light grey background. The styling is editorial and clean. The lighting highlights the smooth grain of the leather and the minimal silver hardware, projecting an aura of sophisticated, effortless style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwOuv4FX5OoIN49eK1ykI3utfmAwnM-CB6nsK1ftmM7uSNrVn7M0VU_ZS7NpBEPvKa91pGjU5g6WknZ3F88ecK9a82RUxRnGHS4uqcdW2oG3pcPCH0uL0wNxcULCILa4AmtbBqfF7QbIVingCuC2A3Xb_jlRTG5rRtcNdvgxdPhhZkEcqcWxj_V4OWvbts1xZSaynG27rCQ0fR_XFvlneCLJuMNtRj93Ho3CPPf0FyVIRXff1qS0Tv"/>
+<button class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-md w-8 h-8 rounded-full flex items-center justify-center text-on-surface opacity-0 group-hover:opacity-100 transition-opacity hover:bg-surface hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface truncate">Structured Minimalist Tote</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">$320.00</p>
+</div>
+<!-- Rec Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A close-up fashion shot of tailored, wide-leg wool trousers in charcoal grey, shown worn by a model standing against a blank, high-key white background. The focus is on the impeccable tailoring, crisp pleats, and fluid drape of the fabric. The mood is modern, professional, and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_7etxkb0mtNM2tFX3suoNjd10mAhSi7UvqNgCyOpf4yw_PmpDqGCXUvwgzDcpHr0e7sLEl6mc6cpqC3DJ-pOB6ueB1DhbOxv_WksYWzoeWimGtsdkW8tYxhUFlgrBEI7rD8o752NBtfOEBcVBJ49U0FXeBtstZMka8NvaVk32mRnrL_zDyyXnrN-ZVl_v5-jtJy3GWXuAswy6CToyEAPEKwH_sxZpcF9-IdJFAlcvB5hATyJEQ5g4"/>
+<div class="absolute top-3 left-3 bg-surface text-on-surface font-label-sm text-[10px] px-2 py-1 rounded-sm uppercase tracking-wider">New</div>
+<button class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-md w-8 h-8 rounded-full flex items-center justify-center text-on-surface opacity-0 group-hover:opacity-100 transition-opacity hover:bg-surface hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface truncate">Tailored Wide-Leg Trouser</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">$210.00</p>
+</div>
+<!-- Rec Item 4 -->
+<div class="group cursor-pointer hidden md:block">
+<div class="aspect-[3/4] bg-surface-container-low mb-3 overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An elegant pair of delicate strappy stiletto sandals in a soft metallic champagne finish. They are placed asymmetrically on a minimalist white plinth. Soft, diffused lighting creates gentle reflections on the metallic surface, embodying a minimalist-luxe, high-fashion aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEHt3yX413wkRhIsKAmPvXjbk8bLt3B1W2QsJVJ_xHkxwTzx--wdm_OGa6j-vE8pssbH0aOYZ7rOSuimdCuKfo0V2AeUCut5y6FniLfyiDjQwBRS_4eR8M6mW6YLvDnrM8iBi0Bnba01xwrohAUXl8m4C2vW7EgzxuXx_np2aLd3pusufi4jqRDnzw2ipcdI6rwDtetWwa6r837l1jx5v6_nRFNWIj07RdkpOkCfgOqDMSq_hcakmw"/>
+<button class="absolute bottom-3 right-3 bg-surface/80 backdrop-blur-md w-8 h-8 rounded-full flex items-center justify-center text-on-surface opacity-0 group-hover:opacity-100 transition-opacity hover:bg-surface hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface truncate">The Barely-There Sandal</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">$185.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full py-stack-lg bg-surface-container-low dark:bg-surface-dim mt-auto border-t border-outline-variant md:border-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-4 md:col-span-1">
+<span class="font-headline-lg text-headline-lg text-on-surface dark:text-inverse-on-surface">OutfitAura</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-auto">© 2024 OutfitAura. EXPRESS YOUR STYLE.</p>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-3 md:col-start-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary underline-offset-4 transition-all duration-200" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary underline-offset-4 transition-all duration-200" href="#">Customer Care</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary underline-offset-4 transition-all duration-200" href="#">About Us</a>
+</div>
+<div class="flex flex-col gap-3 md:col-start-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary underline-offset-4 transition-all duration-200" href="#">Shipping</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary underline-offset-4 transition-all duration-200" href="#">Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple interactivity for size selection
+        document.querySelectorAll('.grid-cols-4 button').forEach(button => {
+            button.addEventListener('click', function() {
+                if(!this.classList.contains('group')) { // Skip disabled 'L'
+                    document.querySelectorAll('.grid-cols-4 button').forEach(b => {
+                        b.classList.remove('bg-on-surface', 'text-on-primary', 'border-on-surface');
+                        b.classList.add('border-outline-variant', 'text-on-surface');
+                    });
+                    this.classList.add('bg-on-surface', 'text-on-primary', 'border-on-surface');
+                    this.classList.remove('border-outline-variant', 'text-on-surface');
+                    document.getElementById('selected-size').innerText = this.innerText.trim();
+                }
+            });
+        });
+    </script>
+</body></html>
